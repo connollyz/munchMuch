@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Particles from 'react-particles-js';
 import Start from '../src/components/Start.js';
 import GameOver from '../src/components/GameOver.js';
@@ -52,14 +52,17 @@ const particlesParams = {
     }
   }
 }
-function App() {
-  return (
-    <main>  
-      <Particles className="particles-js" params={particlesParams} />
-      <Start/>
-      <GameOver />
-    </main>
-  );
+
+class App extends Component {
+  render() {
+    return (
+      <main>
+        <Particles className="particles-js" params={particlesParams} />
+        <Start />
+        <GameOver />
+      </main>
+    );
+  }
 }
 
 export default App;
