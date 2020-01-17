@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="Munch Much donut game">
+    <meta name="description" content="Get as many donuts as you can. Get the high score with out touching the border or your train!">
+    <!-- site title -->
+    <title>Munch Much!</title>
+    <!-- links -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto&display=swap" rel="stylesheet">
+    <!-- css link -->
+   <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main id="particles-js">
+        <div class="container">
+            <div class="start">
+                <h1>Munch Much</h1>
+                <form>
+                    <label for="userName">Name</label>
+                    <input id="userName" type="text" placeholder="Player name" required>
+                    <div class="instructions">
+                        <p>Use arrow keys to much as many donuts as you can!</p>
+                        <p>Look out for the edge or your train! Hit one and its game over!</p>
+                    </div>
+                    <button onclick="startGame()">Play</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <!-- scripts link -->
+    <!-- jquery -->
+    <script src='https://code.jquery.com/jquery-3.2.1.min.js'
+        integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=' crossorigin='anonymous'>
+    </script>
+    <!-- particales-js -->
+    <script src="script/particles.js"></script>
+    <script src="script/particles.min.js"></script>
+    <script src="script/app.js"></script>
+    <!-- script -->
+    <script src="script/scripts.js"></script>
+</body>
+</html>

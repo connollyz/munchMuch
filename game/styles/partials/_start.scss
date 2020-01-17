@@ -1,0 +1,35 @@
+.instructions{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    label{
+        visibility: hidden;
+    }
+    input[type="text"]{
+        border:none;
+        border-bottom: 2px solid hotpink;
+        padding: 10px 0px;
+        background: none;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    button{
+        background: linear-gradient( #ff87c3, hotpink);
+        color: #fff;
+        border: none;
+        border-radius: 25px;
+        padding: 10px;
+        font-family: 'Roboto', sans-serif;
+        width: 150px;
+        font-size: 1rem;
+        text-transform: lowercase;
+        font-weight: 100;
+        margin: 50px auto 20px;
+    }
+}
+
