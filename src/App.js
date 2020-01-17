@@ -52,13 +52,11 @@ const particlesParams = {
     }
   }
 }
-
-
 function App() {
   return (
     <main>  
-      <Start/>
       <Particles className="particles-js" params={particlesParams} />
+      <Start/>
       <GameOver />
     </main>
   );
