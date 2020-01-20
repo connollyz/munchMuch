@@ -1,6 +1,37 @@
 import React, { Component } from 'react';
+import firebase from '../firebase.js';
 
 class Start extends Component {
+    // set state
+    constructor(props) {
+        super(props);
+        this.state = {
+            username: ""
+        }
+    }
+
+    // update the username live
+    handleChange = (e) =>{
+        // prevent page reload
+        e.preventDefault();
+        this.setState({
+            username: e.target.value
+        });
+        console.log(e.target.value)
+    }
+
+    // on click of button push username to firebase data base
+    handleClick = (e)=>{
+        // prevent page reload
+        e.preventDefault();
+        // path to firebase in var
+        const dbRef = firebase.database().ref('item')
+        dbRef.push({
+            'player': this.state.username
+        })
+
+    }
+
     render() {
         return (
             <div className="start">
@@ -8,17 +39,24 @@ class Start extends Component {
                 <h1>Munch Much</h1>
                 <form>
                     <label htmlFor="userName">Name</label>
-                    <input id="userName" type="text" placeholder="Player name" required />
+                    <input 
+                        id="userName" 
+                        type="text" 
+                        placeholder="Player name" 
+                        required  
+                        onChange={this.handleChange}
+                        value={this.state.username}
+                    />
                     <div className="instructions">
                         <p>Use arrow keys to much as many donuts as you can!</p>
                         <p>Look out for the edge or your train! Hit one and its game over!</p>
                     </div>
-                    <button>Play</button>
+                    <button onClick={this.handleClick}>Play</button>
                 </form>
             </div>
             
         )
-    }
+    };
 }
 
 export default Start;

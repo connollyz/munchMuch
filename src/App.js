@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Particles from 'react-particles-js';
 import Start from '../src/components/Start.js';
-import GameOver from '../src/components/GameOver.js';
+// import GameOver from '../src/components/GameOver.js';
 import './App.css';
 
 
@@ -59,7 +59,7 @@ class App extends Component {
       <main>
         <Particles className="particles-js" params={particlesParams} />
         <Start />
-        <GameOver />
+        {/* <GameOver /> */}
       </main>
     );
   }
